@@ -257,5 +257,3 @@ window.addEventListener('scroll', () => {
     track.addEventListener('touchmove', onPointerMove, { passive: true });
     track.addEventListener('touchend', onPointerUp);
 })();
-
-
