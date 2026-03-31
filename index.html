@@ -23,8 +23,8 @@
                 <li class="nav-item--dropdown">
                     <a href="#projects" class="nav-link nav-link--trigger" id="navProjectsTrigger">Projects</a>
                     <ul class="nav-dropdown" aria-label="Projects submenu">
-                        <li><a href="#projects" class="nav-dropdown-link" data-tab="product">Product</a></li>
                         <li><a href="#projects" class="nav-dropdown-link" data-tab="software-data">Software / Data</a></li>
+                        <li><a href="#projects" class="nav-dropdown-link" data-tab="product">Product</a></li>
                         <li><a href="#projects" class="nav-dropdown-link" data-tab="design">Design</a></li>
                     </ul>
                 </li>
@@ -240,15 +240,11 @@
         <div class="container">
             <h2 class="section-title">Projects</h2>
             <div class="projects-tabs">
-                <button type="button" class="projects-tab projects-tab--active" data-tab="product">Product</button>
-                <button type="button" class="projects-tab" data-tab="software-data">Software / Data</button>
+                <button type="button" class="projects-tab projects-tab--active" data-tab="software-data">Software / Data</button>
+                <button type="button" class="projects-tab" data-tab="product">Product</button>
                 <button type="button" class="projects-tab" data-tab="design">Design</button>
             </div>
-            <div class="projects-tab-panel projects-tab-panel--active" id="projects-product">
-                <h3 class="case-study-inline-title">Case Study 1: ESPN Key Plays</h3>
-                <img class="case-study-inline-img" src="assets/case-study-keyplays.png" alt="Case Study 1: ESPN Key Plays">
-            </div>
-            <div class="projects-tab-panel" id="projects-software-data">
+            <div class="projects-tab-panel projects-tab-panel--active" id="projects-software-data">
                 <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-header">
@@ -298,6 +294,12 @@
                             and switching film-style previews.</li>
                     </ul>
                 </div>
+                </div>
+            </div>
+            <div class="projects-tab-panel" id="projects-product">
+                <p class="projects-in-progress">In progress</p>
+                <div class="projects-grid">
+                    <!-- Add product projects here -->
                 </div>
             </div>
             <div class="projects-tab-panel" id="projects-design">
