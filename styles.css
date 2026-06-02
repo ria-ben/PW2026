@@ -489,6 +489,21 @@ body {
     font-weight: 500;
 }
 
+.job-link {
+    display: inline-block;
+    margin-top: 0.75rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    transition: var(--transition);
+}
+
+.job-link:hover {
+    color: var(--text-secondary);
+}
+
 /* Leadership */
 .leadership-grid {
     display: grid;
@@ -711,6 +726,11 @@ body {
 
 .project-link:hover {
     color: var(--text-secondary);
+}
+
+#projects-product .product-tab-link {
+    display: inline-block;
+    margin-top: 0;
 }
 
 /* Photography */
