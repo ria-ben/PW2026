@@ -732,12 +732,21 @@ body {
     color: var(--text-secondary);
 }
 
+#projects-product {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #projects-product .product-tab-links {
     margin: 0 0 0.75rem;
     font-size: 0.8rem;
     font-weight: 500;
     letter-spacing: 0.08em;
     line-height: 1.65;
+    width: 100%;
+    max-width: 900px;
 }
 
 #projects-product .product-tab-links:last-of-type {
