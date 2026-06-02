@@ -620,8 +620,12 @@ body {
     display: none;
 }
 
-.projects-tab-panel--active {
+.projects-tab-panel.projects-tab-panel--active {
     display: block;
+}
+
+.projects-tab-panel[hidden] {
+    display: none !important;
 }
 
 .projects-in-progress {

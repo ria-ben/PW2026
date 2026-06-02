@@ -47,12 +47,8 @@ document.querySelectorAll('.nav-dropdown-link').forEach(link => {
                 const offsetTop = target.offsetTop - 80;
                 window.scrollTo({ top: offsetTop, behavior: 'smooth' });
             }
-            document.querySelectorAll('.projects-tab').forEach(t => t.classList.remove('projects-tab--active'));
-            document.querySelectorAll('.projects-tab-panel').forEach(p => p.classList.remove('projects-tab-panel--active'));
             const tabBtn = document.querySelector('.projects-tab[data-tab="' + tab + '"]');
-            const panel = document.getElementById('projects-' + tab);
-            if (tabBtn) tabBtn.classList.add('projects-tab--active');
-            if (panel) panel.classList.add('projects-tab-panel--active');
+            if (tabBtn) tabBtn.click();
         }
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
@@ -170,21 +166,35 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Projects tabs: Software/Data and Product
+// Projects tabs: Product, Software/Data, Design
 (function () {
     const tabs = document.querySelectorAll('.projects-tab');
     const panels = document.querySelectorAll('.projects-tab-panel');
+
+    function showProjectTab(tabName) {
+        const targetId = 'projects-' + tabName;
+        tabs.forEach(t => {
+            const isActive = t.getAttribute('data-tab') === tabName;
+            t.classList.toggle('projects-tab--active', isActive);
+        });
+        panels.forEach(p => {
+            const isActive = p.id === targetId;
+            p.classList.toggle('projects-tab-panel--active', isActive);
+            p.hidden = !isActive;
+        });
+    }
+
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
-            const targetId = 'projects-' + tab.getAttribute('data-tab');
-            tabs.forEach(t => t.classList.remove('projects-tab--active'));
-            panels.forEach(p => {
-                p.classList.remove('projects-tab-panel--active');
-                if (p.id === targetId) p.classList.add('projects-tab-panel--active');
-            });
-            tab.classList.add('projects-tab--active');
+            showProjectTab(tab.getAttribute('data-tab'));
         });
     });
+
+    // Ensure only the default active tab panel is visible on load
+    const activeTab = document.querySelector('.projects-tab.projects-tab--active');
+    if (activeTab) {
+        showProjectTab(activeTab.getAttribute('data-tab'));
+    }
 })();
 
 // Photo cycle: auto-scroll + arrows + drag to scroll
