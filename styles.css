@@ -736,7 +736,11 @@ body {
 }
 
 .product-tab-links {
-    margin: 0;
+    margin: 0 0 0.75rem;
+}
+
+.product-tab-links:last-child {
+    margin-bottom: 0;
 }
 
 .product-tab-note {
