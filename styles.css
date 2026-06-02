@@ -740,8 +740,16 @@ body {
     line-height: 1.65;
 }
 
-#projects-product .product-tab-links:last-child {
-    margin-bottom: 0;
+#projects-product .product-tab-links:last-of-type {
+    margin-bottom: 1.5rem;
+}
+
+#projects-product .product-tab-image {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    margin: 0 auto;
 }
 
 #projects-product .product-tab-link,
